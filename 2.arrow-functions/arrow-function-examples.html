@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>More Arrow functions</title>
+</head>
+
+<body>
+  <script>
+    const race = '100m dash';
+    const winners = ['Hunu Lokki', 'Joku Mies', 'Eino Leino'];
+
+    const win = winners.map((winner, i) => ({
+      name: winner,
+      race,
+      place: i + 1
+    }));
+
+    const ages = [12, 23, 55, 66, 78, 90];
+
+    const over = ages.filter(age => age >= 60);
+
+    console.table(win);
+    console.log(over);
+  </script>
+</body>
+
+</html>

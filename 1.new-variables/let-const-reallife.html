@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Let and const in reallife</title>
+</head>
+
+<body>
+  
+  <script>
+    (function(){
+      var name = 'Haba';
+      console.log(name);
+    })(); //immediately invoked function blocks var leaking to window
+
+    {
+      const name = 'block scoped';// doesn't leak, block scoped
+      console.log(name);
+    }
+
+    for(var i = 0; i < 10; i++){ //for loop iterates and is finished by the setTimeout function starts
+      setTimeout(function (){
+        console.log('The time is ' + i); 
+      }, 1000);
+    }
+
+    for(let i = 0; i < 10; i++){ //with let it´s block scoped
+      setTimeout(function (){
+        console.log('The time is with let: ' + i);
+      },1000);
+    }
+
+    
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>var-let-const</title>
+</head>
+
+<body>
+  <script>
+   
+    function setWidth() {
+      var width = 100;
+      console.log(width);
+    }
+
+    setWidth();
+
+    var age = 100;
+    if(age > 12){
+      var addAge = age * 2; //leaks to global (window) scope, not inside function scope
+      let decrease = age - 20;//doesn't leak, let is block scoped
+      const block = age + 40; //doesn't leak, const is block scoped
+
+      console.log(`Your are old, ${addAge} old!`);
+      console.log(`Your age has been decreased to ${decrease}`);
+      console.log(`Your age is final: ${block}`);
+    }
+
+
+    let height = 200;
+    const key = 'abc123';
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arrow functions</title>
+</head>
+
+<body>
+  <script>
+    const names = ['haba', 'juba', 'duba'];
+
+    const fullNames = names.map(function(name) {
+      return `${name} boss`;
+    });
+
+    const fullNames2 = names.map(name => {
+      return `${name} without parentheses`;
+    });
+
+    const fullNames3 = names.map((name) => `${name} with Arrow fuction`);
+    const fullNames4 = names.map(() => `cool Haba`);
+
+    const sayMyName = (name) => {
+      alert(`Hello ${name}`);
+    }
+
+    console.log(fullNames);
+    console.log(fullNames2);
+    console.log(fullNames3);
+    console.log(fullNames4);
+    
+    sayMyName('harri');
+
+  </script>
+</body>
+
+</html>

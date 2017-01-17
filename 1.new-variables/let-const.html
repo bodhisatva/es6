@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Let and Const</title>
+</head>
+
+<body>
+
+</body>
+  <script>
+    const key = '1234';
+    let points = 50;
+    let winner = false;//inside window scope
+    const person = {
+      name: 'Harri', //properties of const object can be updated
+      age: 50
+    };
+
+    if (points > 40){
+      console.log('inside if');
+      let winner = true; //inside if block scope
+    }
+  </script>
+</html>

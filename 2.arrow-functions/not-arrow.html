@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>When not to use arrow function</title>
+</head>
+
+<body>
+  <style>
+    button {
+      font-size: 100px;
+    }
+    .on {
+      background: #ffc600;
+    }
+  </style>
+
+  <button id="pushy">Push me </button>
+
+  <script>
+
+  // use arrow when wrapped in regular function declaration.
+  const button = document.getElementById('pushy');
+  button.addEventListener('click', function () {
+    console.log(this);
+    this.classList.toggle('on');
+  });
+
+  // regular fuction when you need a method to bind to an object
+  const person = {
+    age: 23,
+    score() { // equals to regular function
+      this.age++;
+    }
+  }
+
+
+  </script>
+
+</body>
+
+</html>

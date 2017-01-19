@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Default Arguments</title>
+</head>
+
+<body>
+  <script>
+    // default arguments if undefined
+    function calculateBill(total, tax = 0.15, tip = 0.13) {
+      return total + (total * tax) + (total * tip);
+    }
+
+    const bill = calculateBill(100, undefined, undefined);
+    const bill2 = calculateBill(100, 1,1);
+    console.log(bill);
+    console.log(bill2);
+  </script>
+
+</body>
+
+</html>
